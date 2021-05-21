@@ -1,19 +1,24 @@
 #include <iostream>
 using namespace std;
 
+// it work with "class" or "typename"
+template<typename T>
+
+void Swap(T& a, T& b){
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
 int main()
 {
     // program for swapping values of two variables
+    int c = 20;
+    int d = 10;
     
-    int a = 20;
-    int b = 10;
-    
-    a = a + b; // 30
-    b = a - b; // 20
-    a = a - b; // 10
-
-    cout << "a = " << a << endl;
-    cout << "b = " << b;
+    Swap<int>(c, d);
+    cout << "a = " << c << endl;
+    cout << "b = " << d;
     
     system("pause>0");
 }
